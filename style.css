@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "InterBold";
+    src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "InterRegular";
+    src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "InterSemiBold";
+    src: url("assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-color: hsl(0, 0%, 8%);
+    --card-bg-color: hsl(0, 0%, 12%);
+    --social-link-bg: hsl(0, 0%, 20%);
+    --text-color: hsl(0, 0%, 100%);
+    --accent-color: hsl(75, 94%, 57%);
+
+    --fs-body: 14px;
+
+    --fw-light: 400;
+    --fw-med: 600;
+    --fw-bold: 700;
+
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "InterRegular", sans-serif;
+    font-size: var(--fs-body);
+    height: 100vh;
+    padding: 0 1.5rem;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    margin: auto;
+}
+
+.card {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--text-color);
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+}
+
+.section {
+    margin-top: 1.25rem;
+}
+
+.img-container {
+    margin: 0 auto;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.personal-info__name {
+    font-size: 1.25rem;
+}
+
+.personal-info__address {
+    margin-top: 0.5rem;
+    font-family: "Inter Bold", sans-serif;
+    font-weight: var(--fw-bold);
+    color: var(--accent-color);
+}
+
+.social__intro {
+    font-weight: var(--fw-light);
+}
+
+.social__link {
+    display: block;
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: "InterSemiBold", serif;
+    font-weight: var(--fw-med);
+    background-color: var(--social-link-bg);
+    padding: 0.9rem 1.25rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.social__link--active {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.social__link:not(:first-of-type) {
+    margin-top: 0.9rem;
+}
